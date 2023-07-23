@@ -17,8 +17,8 @@
         })
 
          document.addEventListener('DOMContentLoaded', () => {
-            const btnTag1 = document.querySelector('#id_btna')
-            const outTag1 = document.querySelector('#id_outa')
+            const btnTaga = document.querySelector('#id_btna')
+            const outTaga = document.querySelector('#id_outa')
 
             btnTag.addEventListener('click', (event) => {
                 const resulta = getPrizea()
@@ -57,9 +57,9 @@
             const ranNuma = Math.floor((Math.random() * 999) +1)
 
             //경품 생성
-            const gift1 = ['1', '2', '4', '5', '6', '7', '8', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']
+            const gifta = ['1', '2', '4', '5', '6', '7', '8', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']
             //확률 생성
-            const pbt1 = [74, 148, 222, 296, 370, 444, 518, 568, 618, 668, 718, 768, 818, 868, 918, 938, 958, 978, 998, 1000]
+            const pbta = [74, 148, 222, 296, 370, 444, 518, 568, 618, 668, 718, 768, 818, 868, 918, 938, 958, 978, 998, 1000]
             //리턴 경품 값
             let res = ''
 
@@ -69,8 +69,8 @@
                     resa = gifta[i]
                     return resa
                 }
-                else if (pbt1[pbta.length - 1] < ranNuma) {
-                    res1 = gifta[gifta.length - 1]
+                else if (pbta[pbta.length - 1] < ranNuma) {
+                    resa = gifta[gifta.length - 1]
                     return resa
                 }
           }
