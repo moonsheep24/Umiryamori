@@ -16,6 +16,18 @@
             })
         })
 
+         document.addEventListener('DOMContentLoaded', () => {
+            const btnTag1 = document.querySelector('#id_btn')
+            const outTag1 = document.querySelector('#id_out')
+
+            btnTag.addEventListener('click', (event) => {
+                const result1 = getPrize1()
+                outTag.textContent = `축하합니다! ${result}`
+                
+            })
+        })
+
+
         const getPrize = function() {
             //랜덤값 생성 (1~100)
             const ranNum = Math.floor((Math.random() * 999) +1)
@@ -39,14 +51,34 @@
                 }
           }
         }
+
+          const getPrize1 = function() {
+            //랜덤값 생성 (1~100)
+            const ranNum1 = Math.floor((Math.random() * 999) +1)
+
+            //경품 생성
+            const gift1 = ['1', '2', '4', '5', '6', '7', '8', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22']
+            //확률 생성
+            const pbt1 = [74, 148, 222, 296, 370, 444, 518, 568, 618, 668, 718, 768, 818, 868, 918, 938, 958, 978, 998, 1000]
+            //리턴 경품 값
+            let res = ''
+
+          for (let i = 0; i < gift1.length; i++) {
+
+                if(pbt1[i] >= ranNum1){
+                    res1 = gift1[i]
+                    return res1
+                }
+                else if (pbt1[pbt1.length - 1] < ranNum1) {
+                    res1 = gift1[gift1.length - 1]
+                    return res1
+                }
+          }
+        }
+        
     </script>
 </head>
 <body>
-    <div>
-        <h2> 海宮森高校 </h2>
-        <h1>夏祭り特別ショップ</h1>
-        <span> 제목할ㄲ <span>
-    <div>
      <fieldset>
         <legend>띠부띠부씰</legend>
         <table id="id_table">
@@ -55,20 +87,6 @@
                     <th>등급</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>SSR</td>
-                </tr>
-                <tr>
-                    <td>SR</td>
-                </tr>
-                <tr>
-                    <td>R</td>
-                </tr>
-                 <tr>
-                    <td>C</td>
-                </tr>
-            </tbody>
         </table> <br>
         <input type="button" value="경품 추첨" id="id_btn">
     </fieldset>
@@ -76,5 +94,23 @@
         <legend>결과</legend>
         <h1 id="id_out"></h1>
     </fieldset>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+       <fieldset>
+        <legend>띠부띠부씰</legend>
+        <table id="id_table1">
+            <thead>
+            </thead>
+        </table> <br>
+        <input type="button" value="도박 룰렛" id="id_btn1">
+    </fieldset>
+    <fieldset>
+        <legend>결과</legend>
+        <h1 id="id_out1"></h1>
+    </fieldset>
+    
 </body>
 </html>
