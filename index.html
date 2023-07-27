@@ -26,6 +26,16 @@
                 
             })
         })
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnTagS = document.querySelector('#id_btnS')
+            const outTagS = document.querySelector('#id_outS')
+
+            btnTagS.addEventListener('click', (event) => {
+                const resultS = getPrizeS()
+                outTagS.textContent = `축하합니다! ${resultS}`
+                
+            })
+        })
 
 
         const getPrize = function() {
@@ -128,19 +138,19 @@
             <thead>
             </thead>
         </table> <br>
-        <input type="button" value="돌아온 띠부띠부씰" id="id_btnS">
+        <input type="button" value="도박 룰렛" id="id_btnS">
     </fieldset>
     <fieldset>
         <legend>결과</legend>
         <h1 id="id_outS"></h1>
     </fieldset>
       <fieldset>
-        <legend></legend>
+        <legend>돌아온 띠부띠부씰</legend>
         <table id="id_tableS">
             <thead>
             </thead>
         </table> <br>
-        <input type="button" value="추첨" id="id_btnS">
+        <input type="button" value="경품 추첨" id="id_btnS">
     </fieldset>
     <fieldset>
         <legend>결과</legend>
